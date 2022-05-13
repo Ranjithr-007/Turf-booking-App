@@ -129,12 +129,9 @@ GEOIP_PATH = os.path.join(BASE_DIR, 'geoip')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
-]
-STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/turfimages') 
 MEDIA_URL = '/turfimages/'
