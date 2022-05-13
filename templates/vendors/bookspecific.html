@@ -1,0 +1,23 @@
+{% extends 'vendors/base.html' %}
+{% block content %}
+
+<div class="container marketing">
+
+  <div class="row" style="text-align: center;">
+
+{% for turf in turf %}
+  <!-- Three columns of text below the carousel -->
+    <div class="col-lg-4 col-md-4" >
+      <img src="{{ turf.ImageURL }}" width="140" height="140" class="rounded-circle" alt="" srcset="">
+      <h2>{{ turf.turfName }}</h2>
+      <p>{{ turf.address }}</p>
+      <p>{{ turf.distance }} {% if turf.distance is not None %}Km {% endif %}</p>
+
+      <p><a class="btn btn-lg btn-primary" href="/vendor/vendorbooking/{{turf.id}}">Choose &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <!-- /.col-lg-4 -->
+  {% endfor %}
+</div><!-- /.row -->
+</div>
+    {% endblock %}
+    
